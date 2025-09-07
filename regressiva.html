@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contagem Regressiva</title>
+</head>
+<body>
+    <h2>Contagem Regressiva</h2>
+    <div id="resultado"></div>
+    <script>
+        let numero = parseInt(prompt("Digite um número para contar de trás pra frente:"));
+        let resultado = document.getElementById("resultado");
+
+        if (!isNaN(numero) && numero >= 0) {
+            let contagem = "";
+            while (numero >= 0) {
+                contagem += numero + "<br>";
+                numero--;
+            }
+            resultado.innerHTML = contagem;
+        } else {
+            resultado.innerHTML = "Por favor, digite um número maior ou igual a zero.";
+        }
+    </script>
+</body>
+</html>
